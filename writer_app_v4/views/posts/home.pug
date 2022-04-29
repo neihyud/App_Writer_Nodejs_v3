@@ -1,0 +1,98 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Writer App
+  link(rel='stylesheet', href='/css/grid.css')
+  link(rel='stylesheet', href='/css/index.css')
+  script(src='https://kit.fontawesome.com/c909c23c5d.js', crossorigin='anonymous')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap', rel='stylesheet')
+#app.grid.row
+  .navbar.col
+    a.navbar-icon.navbar-home(href='/editor')
+      i.fa-solid.fa-pen-to-square
+    a.navbar-icon(href='')
+      i.icon-edit-title.fa-solid.fa-pen
+    a.navbar-icon(href='')
+      i.icon-edit-title.fa-solid.fa-pen
+  .library.col
+    h1.library_name My Library
+    .library_search
+      .library_search-input
+        input.library_search-doc(type='text', placeholder='Search')
+      .library_group-handle-doc
+        select
+          option Lasted updated
+        button.btn-handle-doc Create a Doc
+    ul.library_organize-list-doc
+      li.library_organize-list-doc-item.doc-bottom Saved
+      li.library_organize-list-doc-item Favorites
+      li.library_organize-list-doc-item History
+      .line
+    .library_list-doc
+      .row
+        .library_list-item.col.l-4
+          .library_doc
+            h2.library_doc-title Name Title
+            p.library_doc-part-content
+              | Specifies that the drop-down list
+              | should automatically get focus when the page loads,
+              | Specifies that a drop-down list should be disabled, Specifies that a drop-down list should be disabled
+              | Specifies that a drop-down list should be disabled, Specifies that a drop-down list should be disabled
+              | ,Specifies that a drop-down list should be disabled
+            .footer-item
+              p.library_doc-time Now What time is it
+              .group-handle-doc
+                a(href='')
+                  i.fa-solid.fa-star
+                a(href='')
+                  i.fa-solid.fa-trash-can
+                a(href='')
+                  i.fa-solid.fa-cloud-arrow-down
+        .library_list-item.col.l-4
+          .library_doc
+            h2.library_doc-title Name Title
+            p.library_doc-part-content
+              | Specifies that the drop-down list should automatically get focus when the page loads, Specifies that a drop-down list should be disabled
+            .footer-item
+              p.library_doc-time Now What time is it
+              .group-handle-doc
+                a(href='')
+                  i.fa-solid.fa-star
+                a(href='')
+                  i.fa-solid.fa-trash-can
+                a(href='')
+                  i.fa-solid.fa-cloud-arrow-down
+        .library_list-item.col.l-4
+          .library_doc
+            h2.library_doc-title Name Title
+            p.library_doc-part-content
+              | Specifies that the drop-down list should automatically get focus when the page loads, Specifies that a drop-down list should be disabled
+            .footer-item
+              p.library_doc-time Now What time is it
+              .group-handle-doc
+                a(href='')
+                  i.fa-solid.fa-star
+                a(href='')
+                  i.fa-solid.fa-trash-can
+                a(href='')
+                  i.fa-solid.fa-cloud-arrow-down
+        .library_list-item.col.l-4
+          .library_doc
+            h2.library_doc-title Name Title
+            p.library_doc-part-content
+              | Specifies that the drop-down list should automatically get focus when the page loads, Specifies that a drop-down list should be disabled
+            .footer-item
+              p.library_doc-time Now What time is it
+              .group-handle-doc
+                a.icon-handle(href='')
+                  i.fa-solid.fa-star
+                a.icon-handle(href='')
+                  i.fa-solid.fa-trash-can
+                a.icon-handle(href='')
+                  i.fa-solid.fa-cloud-arrow-down
+
+script
+    include ../../public/script/index.js
+
