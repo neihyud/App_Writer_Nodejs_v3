@@ -108,13 +108,22 @@ body {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
-    height: 100px; }
+    height: 100px;
+    text-decoration: none;
+    color: #333; }
 
 .footer-item {
   display: flex;
   justify-content: space-between;
   margin: 20px 0 5px 0; }
-  .footer-item i {
+  .footer-item .library_doc-time {
+    flex: 1; }
+  .footer-item .group-handle-doc .icon-handle-doc {
     color: #333;
-    margin: 0 5px;
-    font-size: 16px; }
+    margin: 0 8px;
+    font-size: 18px;
+    cursor: pointer; }
+  .footer-item .group-handle-doc .icon-handle-doc:hover {
+    opacity: 0.8;
+    transform: translateY(-4px);
+    transition: 0.1s ease-in; }

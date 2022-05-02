@@ -9,7 +9,7 @@
 	box-sizing: border-box;
 }
 
-#modal-notify {
+#modal-notify, #modal-security {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -23,7 +23,7 @@
 }
 
 .modal-notify__inner {
-	width: 300px;
+	width: 350px;
 	background-color: #fff;
 	border-radius: 5px;
 	overflow: hidden;
@@ -73,7 +73,7 @@
 	text-align: right;
 }
 
-.modal-notify__footer button {
+.modal-notify__footer .btn-footer-notify {
 	outline: none;
 	border: none;
 	padding: 10px 20px;
@@ -81,4 +81,17 @@
 	color: white;
 	border-radius: 6px;
 	cursor: pointer;
+}
+
+.modal-notify__footer a.btn-footer-notify {
+	padding: 8px 18px;
+	text-decoration: none;
+}
+
+.input-password {
+	width: 100%;
+	font-size: 20px;
+	padding: 5px 10px;
+	margin-top: 15px;
+	border-radius: 5px;
 }

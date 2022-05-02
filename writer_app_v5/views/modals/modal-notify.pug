@@ -1,0 +1,26 @@
+mixin notify(content, element, path)   
+    #modal-notify.hide
+        .modal-notify__inner
+            .modal-notify__header
+                h3 Notification
+                i.fas.fa-times
+            .modal-notify__body
+                p= content
+            .modal-notify__footer
+                if (element == 'button')
+                    button.btn-footer-notify OK
+                else 
+                    a(href=path).btn-footer-notify OK
+        
+mixin password(path)   
+    #modal-security.hide
+        .modal-notify__inner
+            .modal-notify__header
+                h3 Password
+                i.fas.fa-times
+            .modal-notify__body
+                input(type='text', placeholder='Password').input-password
+            .modal-notify__footer
+                button(form='text-area', formaction=path).btn-footer-notify.btn-open-doc-security OK
+
+

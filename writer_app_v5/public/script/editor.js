@@ -10,18 +10,6 @@ function start() {
     var search = location.search
     if (search.includes('success=true')) {
         console.log('true')
-        if (typeof URLSearchParams !== 'undefined') {
-            const params = new URLSearchParams('param1=1&param2=2&param3=3')
-
-            console.log(params.toString())
-
-            params.delete('param2')
-
-            console.log(params.toString())
-
-        } else {
-            console.log(`Your browser does not support URLSearchParams`)
-        }
     }
 }
 start()
@@ -48,6 +36,6 @@ modal.onclick = function () {
     }
 }
 
-window.onclick = function (e) {
-    console.log(e.target)
-}
+// window.onclick = function (e) {
+//     console.log(e.target)
+// }

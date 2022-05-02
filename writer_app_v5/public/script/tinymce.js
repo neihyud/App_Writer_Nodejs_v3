@@ -5,7 +5,7 @@ tinymce.init({
         ' fontselect formatselect fontsizeselect | alignleft aligncenter |' + 
     'alignright alignjustify | bullist numlist outdent indent | ' +
         'removeformat | help',
-    content_style: "body { font-family: Arial; font-size: 12pt;}",
+    content_style: "body { font-family: Comic Sans MS; font-size: 14pt;}",
     plugins: 'autoresize',
     autoresize_on_init: false,
 });
