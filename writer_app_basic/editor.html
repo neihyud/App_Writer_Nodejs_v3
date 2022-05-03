@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writer App</title>
+    <link rel="stylesheet" href="./assets/css/responsive-editor.css">
+    <link rel="stylesheet" href="./assets/css/style-editor.css">
+    <link rel="stylesheet" href="./assets/css/notify.css">
+    <script src="https://kit.fontawesome.com/c909c23c5d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tiny.cloud/1/6or7kwitvl7qawbt7i8fpji7h35e31rkmun0riegzmgh3wuq/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+
+    <script src="./assets/script/tinymce.js"></script>
+</head>
+
+<body>
+    <div id="container" class="row">
+        <div class="col container-left l-2">
+            <img src="https://raw.githubusercontent.com/neihyud/DocsRecent/main/assets/img/avatar.png" class="avatar" alt="">
+            <div class="container-left-inner">
+                <ul class="container-left-function">
+                    <li class="container-left-function-item container-left-funtion-docs current-item">
+                        <i></i>
+                        Docs
+                    </li>
+                    <li class="container-left-function-item container-left-funtion-new">
+                        <i></i>
+                        New
+                    </li>
+                    <li class="container-left-function-item container-left-funtion-save">
+                        <i></i>
+                        Save
+                    </li>
+                    <li class="container-left-function-item container-left-funtion-info">
+                        <i></i>
+                        Info
+                    </li>
+                </ul>
+                <!-- <ul class="container-left-function container-left-function-setting">
+                    <li class="container-left-function-item">
+                        <i></i>
+                        Bottom 1
+                    </li>
+                    <li class="container-left-function-item">
+                        <i></i>
+                        Bottom 2
+                    </li>
+                </ul> -->
+            </div>
+        </div>
+
+        <div class="col row container-mid l-8">
+            <div class="row doc-current">
+                <div class="container-mid-title l-2">
+                    <div id="group-title">
+                        <p class="name-title" contenteditable="false">Untitled Doc</p>
+                        <i class="edit-title fa-solid fa-pen"></i>
+                    </div>
+                    <p class="info-title">
+                        <span class="icon-function"><i class="icon-left fa-solid fa-arrow-left"></i></span>
+                        <span class="icon-function"><i class="icon-new fa-solid fa-file"></i></span>
+                        <span class="icon-function"><i class="icon-save fa-solid fa-floppy-disk"></i></span>
+                    </p>
+                </div>
+                <form method="post" class="text-area">
+                    <textarea id="myTextarea" name="myTextarea">
+                    </textarea>
+                </form>
+            </div>
+        </div>
+
+        <div class="col container-right l-1-5"></div>
+    </div>
+
+    <div id="modal" class="hide">
+        <div class="modal__inner modal-save-warning hide">
+            <div class="modal__header">
+                <p>Warning</p>
+            </div>
+            <div class="modal__body">
+                <p>Please write to the document</p>
+            </div>
+            <!-- <div class="modal__footer">
+                <button class="btn btn-close">Ok</button>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="toast-messenger">
+        
+    </div>
+    
+    <script src="./assets/script/func-editor.js"></script>
+    <script src="./assets/script/script-editor.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --border-td: 30px;
+    --margin-left-nav: 40px;
+    --margin-container-left-nav: 16.667%;
+    --margin-top-docs-recent-title: 16.667%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    cursor: default;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#container {
+    padding: 20px 12px 12px 20px;
+    height: 100vh;
+}
+
+.container-left-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+.container-left-function {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.container-left-function li {
+    padding: 2px 0;
+    cursor: pointer;
+}
+
+.container-left-function .container-left-function-item {
+    margin-left: -8px;
+    padding-left: 8px;
+}
+
+.container-left-function li:hover {
+    background-color: rgb(241, 238, 238);
+    border-radius: 2px;
+}
+
+.container-left-function .current-item {
+    background-color: #ccc;
+    border-radius: 2px;
+}
+
+.container-left-funtion-save.current-item {
+    background-color: #fff;
+}
+
+/*Container Mid*/
+#container .container-mid {
+    /* display: none; */
+    width: 100%;
+}
+
+.container-mid .doc-current {
+    flex-direction: column;
+    width: 100%;
+}
+
+.container-mid-title {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container-mid-title .name-title {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 25px;
+    min-width: 25px;
+    outline: none;
+}
+
+.container-mid-title .edit-title {
+    font-size: 16px;
+    padding-left: 10px;
+    cursor: pointer;
+    transform: translateY(-2px)
+}
+
+
+
+/* hien thi khi xuat hien overlay */
+#group-title .overlay-title {
+    position: relative;
+    border: 2px solid #5d94db;
+    padding: 0 8px;
+    z-index: 1;
+}
+
+
+/*Thay doi size cua editor*/
+.tox .tox-editor-header {
+    z-index: 0 !important;
+}
+
+
+.tox.tox-tinymce {
+    height: 81vh !important;
+}
+
+.tox-statusbar {
+    display: none !important;
+}
+
+
+
+/*Container Mid - List docs*/
+.container-mid .docs-recent {
+    flex-direction: column;
+    width: 100%;
+    margin-left: calc(var(--margin-left-nav) + 60px);
+}
+
+.docs-recent .docs-recent-title {
+    font-size: 32px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* position: fixed;
+    height: var(--margin-top-docs-recent-title);
+    background-color: red;
+    z-index: 1; */
+}
+
+.docs-recent .table-title {
+    margin-top: -14px;
+   /*  margin-top: var(--margin-top-docs-recent-title) */
+}
+
+.docs-recent .table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-left: -18px;
+}
+
+.docs-recent table .tr {
+    border-bottom: 1px solid #ccc;  
+    cursor: pointer;
+    position: relative;
+}
+
+.docs-recent table .tr:hover {
+    background-color: #ccc;
+}
+
+/* tao hai o tron */
+
+.docs-recent .tr:hover td:first-child:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -23px;
+    background-color: #ccc;
+    height: 55px;
+    width: 45px;
+    border-radius: 50%;
+    z-index: -1;
+
+}
+
+.docs-recent .tr:hover td:last-child:after {
+    content: "";
+    position: absolute;
+    right: -23px;
+    top: 0;
+    background-color: #ccc;
+    height: 55px;
+    width: 45px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.docs-recent .tr td:first-child {
+    width: 5%;
+    padding: 15px 20px;   
+}
+
+.docs-recent .tr td:nth-child(2) {
+    width: 70%;
+    font-size: 18px;
+}
+
+.docs-recent .tr td:nth-child(3) {
+    width: 25%;
+    font-size: 15px;
+}
+
+.docs-recent .tr td:nth-child(4) {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.docs-recent .tr td i {
+    font-size: 18px;
+}
+
+.docs-recent td .ellipsis {
+    padding: 15px 10px;
+    /* position: relative; */
+}
+
+.docs-recent td .ellipsis:hover {
+    color: #fff;
+    border-radius: 50%;
+}
+
+th {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 0px;
+}
+
+.handle-file {
+    position: absolute;
+    margin: -8px 0 0 -60px;
+    list-style-type: none;
+    border: 0.1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
+    background-color:#fff;
+    z-index: 1;
+    border-radius: 2px;
+    text-align: left;
+}
+
+.handle-file-item {
+    font-size: 12px;
+    padding: 2px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+.handle-file-item:hover {
+    background-color: #ccc;
+}
+
+.form-password {
+    width: 300px;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-password .input-password {
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+}
+
+.form-password button {
+    float: right;
+    font-size: 15px;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+.hide {
+    display: none;
+}

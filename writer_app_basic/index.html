@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docs Recent</title>
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/notify.css">
+    <script src="https://kit.fontawesome.com/c909c23c5d.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.tiny.cloud/1/6or7kwitvl7qawbt7i8fpji7h35e31rkmun0riegzmgh3wuq/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+</head>
+
+<body>
+    <div id="container" class="row">
+        <div class="col container-left l-1">
+            <img src="https://raw.githubusercontent.com/neihyud/DocsRecent/main/assets/img/avatar.png" class="avatar" alt="">
+            <span class="tooltip-new-doc">New doc</span>
+        </div>
+        <div class="col row container-mid l-10">
+            <div class="row docs-recent">
+                <p class="docs-recent-title">Docs</p>
+                <table class="table">
+                    <thead class="table-title">
+                        <tr>
+                            <th colspan="2" class="name-doc">Name Doc</th>
+                            <th>Time</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+                <div style="padding-bottom: 100px;"></div>
+            </div>
+        </div>
+
+        <div class="col container-right l-1"></div>
+    </div>
+
+    <div id="modal" class="hide">
+        <div class="modal__inner modal-delete hide">
+            <div class="modal__header">
+                <p>Delete Doc</p>
+                <i class="icon-close fas fa-times"></i>
+            </div>
+            <div class="modal__body">
+                <p>Are you sure you want to delete this doc?</p>
+            </div>
+            <div class="modal__footer">
+                <button class="btn btn-close">Close</button>
+                <button class="btn btn-delete">Delete</button>
+            </div>
+        </div>
+
+        <div class="modal__inner modal-save-warning hide">
+            <div class="modal__header">
+                <p>Warning</p>
+            </div>
+            <div class="modal__body">
+                <p>Please write to the document</p>
+            </div>
+            <!-- <div class="modal__footer">
+                <button class="btn btn-close">Ok</button>
+            </div> -->
+        </div>
+    </div>
+    <span class="back"><i class="icon-left fa-solid fa-arrow-left"></i></span>
+</body>
+<script src="./assets/script/func.js"></script>
+<script src="./assets/script/script.js"></script>
+
+</html>

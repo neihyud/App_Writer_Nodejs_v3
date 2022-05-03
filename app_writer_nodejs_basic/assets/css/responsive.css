@@ -1,0 +1,164 @@
+.row {
+    display: flex;
+}
+
+.col {
+    padding: 0 8px;
+}
+
+.l-1-5 {
+    flex: 0 0 12.5%;
+}
+
+.l-2 {
+    flex: 0 0 16.667%;
+}
+
+.l-2-5 {
+    flex: 0 0 20.8335%;
+    max-width: 20.8335%;
+}
+
+.l-7 {
+    flex: 0 0 58.333%;
+    max-width: 58.333%;
+}
+
+.l-8 {
+    flex: 0 0 66.667%;
+    max-width: 66.667%;
+}
+
+.l-8-5 {
+    flex: 0 0 79.167%;
+    max-width: 79.167%;
+}
+
+.l-10-5 {
+    flex: 0 0 87.5%;
+}
+
+.l-11 {
+    flex: 0 0 16.667%;
+    max-width: 16.667%;
+}
+
+
+/*Mobie*/
+@media (max-width: 739px) {
+    #container .container-mid {
+        padding-left: 0;
+        margin-bottom: 100px;
+    }
+
+    table {
+        width: 90vw;
+    }
+
+    .avatar {
+        display: none;
+    }
+
+    .container-right {
+        display: none;
+    }
+
+    .docs-recent .tr td:nth-child(3) {
+        display: none;
+    }
+
+    .docs-recent .tr td:nth-child(4) {
+        text-align: right;
+        padding-right: 0;
+    }
+    
+    .docs-recent tr th:nth-child(2) {
+        display: none;
+    }
+
+    .icon-left {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 5;
+        font-size: 20px;
+    }
+
+}
+
+/* PC */
+@media (min-width: 740px) {
+    .l-1 {
+        flex: 0 0 8.333%;
+    }
+
+    .l-10 {
+        flex: 0 0 83.333%;
+        max-width: 83.333%; 
+    }
+
+    .avatar:hover + .tooltip-new-doc {
+        display: inline-block;
+    }
+
+    .container-left {
+        position: fixed;
+        top: 15px;
+        bottom: 0;
+        width: 12.5vw;
+        background-color: transparent;   
+    }
+
+    #container .container-mid {
+        padding-left: var(--margin-container-left-nav);
+        margin-bottom: 100px;
+    }
+
+    .docs-recent .tr:hover td:first-child:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -23px;
+        background-color: #ccc;
+        height: 55px;
+        width: 45px;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .docs-recent .tr:hover td:last-child:after {
+        content: "";
+        position: absolute;
+        right: -23px;
+        top: 0;
+        background-color: #ccc;
+        height: 55px;
+        width: 45px;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .docs-recent .table-title th:first-child:before {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        width: 50px;
+        height: 100%;
+        top: 0;
+        left: -32px;
+    }
+
+    .docs-recent .table-title th:first-child:after {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        width: 50px;
+        height: 100%;
+        top: 0;
+        right: -32px;
+    }
+
+    .back {
+        display: none;
+    }
+}

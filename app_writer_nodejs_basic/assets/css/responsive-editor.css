@@ -1,0 +1,121 @@
+.row {
+    display: flex;
+}
+
+.col {
+    padding: 0 8px;
+}
+
+.l-1 {
+    flex: 0 0 8.333%;
+}
+
+.l-1-5 {
+    flex: 0 0 12.5%;
+}
+
+.l-2 {
+    flex: 0 0 16.667%;
+    /* max-width: 16.667%; */
+}
+
+.l-2-5 {
+    flex: 0 0 20.8335%;
+    max-width: 20.8335%;
+}
+
+.l-7 {
+    flex: 0 0 58.333%;
+    max-width: 58.333%;
+}
+
+
+
+.l-8-5 {
+    flex: 0 0 79.167%;
+    max-width: 79.167%;
+}
+
+.l-10 {
+    flex: 0 0 83.333%;
+    max-width: 83.333%; 
+}
+
+.l-10-5 {
+    flex: 0 0 87.5%;
+}
+
+.l-11 {
+    flex: 0 0 16.667%;
+    max-width: 16.667%;
+}
+
+/* Mobie */
+@media (max-width: 739px) {
+    .container-left {
+        display: none;
+    }
+
+    .container-right {
+        display: none;
+    }
+
+    .container-mid {
+        margin-left: 0;
+    }
+    
+    .icon-function {
+        padding: 5px 10px;
+        background-color: #ccc;
+        border-radius: 50%;
+        margin-left: 8px;
+    }
+
+    .icon-function:hover {
+       opacity: 0.5;
+       cursor: pointer;
+    }
+
+    .tox.tox-tinymce {
+        width: 100vw !important;
+        margin-left: -28px;
+    }
+
+    .info-title {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+
+/* PC */
+@media (min-width: 740px) {
+    .l-8 {
+        flex: 0 0 66.667%;
+        max-width: 66.667%;
+    }
+    .container-left {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        font-size: 20px;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-right: 20px;
+        width: var(--margin-container-left-nav);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-mid {
+  /*  flex-direction: column; */
+        margin-left: var(--margin-container-left-nav);
+        width: 100% !important;
+    }
+
+    .icon-function {
+        display: none;   
+    }
+}
