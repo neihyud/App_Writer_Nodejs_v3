@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -96,7 +96,7 @@ body {
     margin-top: 24px; }
   .library_list-doc .library_doc {
     border: 1px solid #333;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: #fff;
     border: none;
     outline: none;
@@ -104,6 +104,8 @@ body {
   .library_list-doc .group-title-doc {
     display: flex;
     align-items: center; }
+  .library_list-doc .library_doc-title {
+    font-size: 35px; }
   .library_list-doc .icon-key {
     padding: 0 8px; }
   .library_list-doc .library_doc-part-content {
@@ -121,7 +123,9 @@ body {
   justify-content: space-between;
   margin: 20px 0 5px 0; }
   .footer-item .library_doc-time {
-    flex: 1; }
+    flex: 1;
+    font-weight: 500;
+    color: darkgray; }
   .footer-item .group-handle-doc .icon-handle-doc {
     color: #333;
     margin: 0 8px;
