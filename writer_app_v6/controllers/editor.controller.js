@@ -34,7 +34,7 @@ module.exports.saveSecurity = function (req, res) {
 }
 
 
-module.exports.postCurrent = function (req, res) {
+module.exports.postSecurityCurrent = function (req, res) {
     const id = req.params.id
     let sql = `SELECT * FROM posts WHERE id = ${id}`
     connection.query(sql, function (err, result) {
@@ -49,5 +49,14 @@ module.exports.postCurrent = function (req, res) {
             values: result[0]
         })
     })
+}
 
+module.exports.postCurrent = function (req, res) {
+    const id = req.params.id
+    let sql = `SELECT * FROM posts WHERE id = ${id}`
+    connection.query(sql, function (err, result) {
+        res.render('posts/editor', {
+            values: result[0]
+        })
+    })
 }
