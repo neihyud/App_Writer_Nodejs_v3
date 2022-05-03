@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+    <link rel="stylesheet" href="/css/grid.css"></li>
+    <link rel="stylesheet" href="/css/editor.css"></li>
+
+
+    <script src="https://kit.fontawesome.com/c909c23c5d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tiny.cloud/1/6or7kwitvl7qawbt7i8fpji7h35e31rkmun0riegzmgh3wuq/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+
+    <script src="/script/tinymce.js"></script>
+</head>
+
+<body>
+    <div id="container" class="">
+        <div class="header">
+            <div id="group-header" class="grid wide row">
+                <div class="group-title col row">
+                    <h1 class="doc-title">Name Doc</h1>
+                    <i class="icon-edit-title fa-solid fa-pen"></i>
+                </div>
+                <div class="group-title-time col">
+                    Time ------
+                </div>
+                <div class="col row list-icon-header_handle">
+                    <a class="icon-header-doc"><i class="fa-solid fa-floppy-disk"></i></a>
+                    <a class="icon-header-doc"><i class="fa-solid fa-file"></i></a>
+                    <a class="icon-header-doc"><i class="fa-solid fa-house"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="body grid wide">
+            <form method="post" class="text-area">
+                <textarea id="myTextarea" name="myTextarea"></textarea>
+            </form>
+        </div>
+    </div>
+    <div id="modal" class="hide"></div>
+    <script src="./script/editor.js"></script>
+</body>
+
+</html>

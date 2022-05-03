@@ -1,0 +1,67 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Writer App
+  link(rel='stylesheet', href='/css/grid.css')
+  link(rel='stylesheet', href='/css/index.css')
+  link(rel='stylesheet', href='/css/modal.css')
+  script(src='https://kit.fontawesome.com/c909c23c5d.js', crossorigin='anonymous')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap', rel='stylesheet')
+include ../modals/modal-notify.pug
+#app.grid.row
+  .navbar.col
+    a.navbar-icon.navbar-home(href='/editor')
+      i.fa-solid.fa-pen-to-square
+    a.navbar-icon(href='')
+      i.icon-edit-title.fa-solid.fa-pen
+    a.navbar-icon(href='')
+      i.icon-edit-title.fa-solid.fa-pen
+  .library.col.grid
+    h1.library_name My Library
+    .library_search
+      .library_search-input
+        input.library_search-doc(type='text', placeholder='Search')
+      .library_group-handle-doc
+        select
+          option Lasted updated
+        button.btn-handle-doc Create a Doc
+    ul.library_organize-list-doc
+      li.library_organize-list-doc-item.doc-bottom Saved
+      li.library_organize-list-doc-item Favorites
+      li.library_organize-list-doc-item History
+      .line
+    .library_list-doc
+      .row
+        each post in posts
+          .library_list-item.col.l-4
+            .library_doc
+              .group-title-doc
+                h2.library_doc-title #{post.title}
+                if(post.password)
+                  i.fa-solid.fa-key.icon-key  
+              a(href=`/editor/${post.id}`, 
+                onclick= !post.password ? '' : `event.preventDefault(); inputPass(${post.id})`,
+                key= post.password ? 'true' : 'false').library_doc-part-content #{post.content}
+              .footer-item
+                .library_doc-time #{post.lastUpdated}
+                .group-handle-doc
+                  a(href='')
+                    i.fa-solid.fa-star.icon-handle-doc
+                  a(postId=`${post.id}`, onclick=`event.stopPropagation(); getId(${post.id})`).open-modal-btn
+                    i.fa-solid.fa-trash-can.btn-remove-post.icon-handle-doc
+                  a(href='data:text/html, ${post.content}', download=`${post.title}` + '.txt')
+                    i.fa-solid.fa-cloud-arrow-down.icon-handle-doc
+form#text-area(method='post')
+  +password('/editor')
++notify('Do you want to remove this post?', 'a', '/')
+
+script
+    include ../../public/script/index.js
+script
+  include ../../public/script/modals/modal-home.js
+script
+  include ../../public/script/modals/modal.js
+
+
