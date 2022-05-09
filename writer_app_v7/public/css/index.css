@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: inherit; }
+
+body {
+  background-color: #edf0f8; }
+
+.icon-edit {
+  display: inline-block; }
+
+.navbar {
+  height: 100vh;
+  position: fixed;
+  background-color: #2556a5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .navbar .navbar-icon {
+    color: #b2c1d9;
+    font-size: 20px;
+    padding: 0 2px;
+    margin: 10px 0; }
+  .navbar .navbar-home {
+    margin-top: 50px; }
+
+.library {
+  margin-left: 50px;
+  padding: 25px 50px;
+  box-sizing: border-box; }
+
+.library_name {
+  color: #333;
+  font-size: 35px; }
+
+.library_search {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between; }
+  .library_search .library_search-doc {
+    font-size: 16px;
+    padding: 8px 16px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 450px; }
+  .library_search .library_group-handle-doc {
+    align-self: center; }
+    .library_search .library_group-handle-doc select, .library_search .library_group-handle-doc .btn-handle-doc {
+      font-size: 16px;
+      padding: 8px 10px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      font-weight: 500;
+      border-radius: 10px; }
+    .library_search .library_group-handle-doc select {
+      margin-right: 15px;
+      border: 1px solid #333; }
+    .library_search .library_group-handle-doc .btn-handle-doc {
+      color: #fff;
+      background-color: #1e86ff;
+      padding: 9px 16px; }
+
+.library_organize-list-doc {
+  list-style-type: none;
+  display: flex;
+  position: relative; }
+  .library_organize-list-doc .library_organize-list-doc-item {
+    margin-right: 50px;
+    padding: 10px 0;
+    z-index: 1;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer; }
+  .library_organize-list-doc .doc-bottom {
+    border-bottom: 5px solid #113f88; }
+  .library_organize-list-doc .library_organize-list-doc-item:hover {
+    border-bottom: 5px solid #5984c8; }
+  .library_organize-list-doc .line {
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 2px; }
+
+.library_list-doc {
+  height: 200px; }
+  .library_list-doc .library_list-item {
+    margin-top: 24px; }
+  .library_list-doc .library_doc {
+    border: 1px solid #333;
+    padding: 20px 20px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px; }
+  .library_list-doc .group-title-doc {
+    display: flex;
+    align-items: center; }
+  .library_list-doc .library_doc-title {
+    font-size: 25px; }
+  .library_list-doc .icon-key {
+    padding: 0 8px; }
+  .library_list-doc .library_doc-part-content {
+    padding: 10px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    height: 100px;
+    text-decoration: none;
+    color: #333; }
+
+.footer-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 5px 0; }
+  .footer-item .library_doc-time {
+    flex: 1;
+    font-weight: 500;
+    color: darkgray; }
+  .footer-item .group-handle-doc .icon-handle-doc {
+    color: #333;
+    margin: 0 8px;
+    font-size: 18px;
+    cursor: pointer; }
+  .footer-item .group-handle-doc .icon-handle-doc:hover {
+    opacity: 0.8;
+    transform: translateY(-4px);
+    transition: 0.1s ease-in; }
+
+body::-webkit-scrollbar {
+  display: none; }
+
+.hide {
+  display: none; }

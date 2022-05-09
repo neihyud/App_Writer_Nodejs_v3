@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif; }
+
+body {
+  background-color: #c7d5eb; }
+
+.header {
+  padding: 25px 0; }
+
+#group-header {
+  justify-content: space-between; }
+  #group-header .doc-title {
+    max-width: 300px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 30px;
+    font-weight: 800; }
+  #group-header .doc-title.doc-title-focus {
+    border: 2px solid #fff;
+    z-index: 2; }
+  #group-header .icon-edit-title {
+    display: inline-block;
+    margin: auto 0;
+    padding: 0 10px;
+    font-size: 20px;
+    cursor: pointer; }
+  #group-header .icon-edit-title:hover {
+    opacity: 0.5; }
+  #group-header .group-title-time {
+    align-self: center; }
+  #group-header .row.list-icon-header_handle {
+    list-style-type: none; }
+  #group-header .icon-header-doc {
+    margin: auto 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; }
+  #group-header .btn-header-doc {
+    color: #333;
+    outline: none;
+    border: none;
+    width: 32px;
+    height: 32px;
+    font-size: 16px; }
+  #group-header .icon-header-doc i {
+    color: #333; }
+
+.body.grid.wide {
+  margin-top: 25px; }
+
+#modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #333;
+  z-index: 1;
+  opacity: 0.5; }
+
+#modal.modal-title {
+  background-color: transparent; }
+
+.tox .tox-editor-header {
+  z-index: 0 !important; }
+
+.tox.tox-tinymce {
+  height: 82vh !important; }
+
+.tox-statusbar {
+  display: none !important; }
+
+body::-webkit-scrollbar {
+  display: none; }
+
+.hide {
+  display: none; }

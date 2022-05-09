@@ -1,0 +1,50 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Editor
+  link(rel='stylesheet', href='/css/grid.css')
+  link(rel='stylesheet', href='/css/editor.css')
+  link(rel='stylesheet', href='/css/modal.css')
+  script(src='https://kit.fontawesome.com/c909c23c5d.js', crossorigin='anonymous')
+  script(src='https://cdn.tiny.cloud/1/6or7kwitvl7qawbt7i8fpji7h35e31rkmun0riegzmgh3wuq/tinymce/5/tinymce.min.js', referrerpolicy='origin')
+  script(src='/tinymce.js')
+  link(href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet')
+include ../modals/modal-notify.pug
+#container
+  .header
+    form#text-area.text-area(name='content', method='post', action='/editor')
+      #group-header.grid.wide.row
+        .group-title.col.row
+          input.doc-title(
+            name='title', 
+            oninput='this.size = this.value.length - 2 < 1 ? 1 : this.value.length - 2', 
+            value=values ? `${values.title}` : 'Name Doc', 
+            size='7', 
+            readonly)
+          i.icon-edit-title.fa-solid.fa-pen
+        //- .group-title-time.col
+        //-   | Time ------
+        .col.row.list-icon-header_handle
+          button(form='text-area').icon-header-doc.btn-header-doc
+            i.fa-solid.fa-floppy-disk
+          a.icon-header-doc.icon-security
+            i.fa-solid.fa-file-shield
+          a(href='/').icon-header-doc
+            i.fa-solid.fa-file
+          a(href='/').icon-header-doc
+            i.fa-solid.fa-house
+      .body.grid.wide
+        input#myTextarea(name='myTextarea', value= values ? values.content : '')
+      +password('/editor/save-security')
+#modal.hide
+if (emptyPost)
+    +notify('Please Writer!!!', 'button')
+
+script
+  include ../../resources/script/editor.js
+script
+  include ../../resources/script/modals/modal-editor.js
+script
+  include ../../resources/script/modals/modal.js

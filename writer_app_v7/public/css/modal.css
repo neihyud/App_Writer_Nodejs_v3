@@ -1,0 +1,97 @@
+:root {
+	--pink-color: #db6164;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+#modal-notify, #modal-security {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 2;
+}
+
+.hide {
+	display: none;
+}
+
+.modal-notify__inner {
+	width: 350px;
+	background-color: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+	animation: showModal linear 0.1s;
+	position: relative;
+	margin: 200px auto;
+}
+
+@keyframes showModal {
+	from {
+		top: -200px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.modal-notify__header {
+	background-color: var(--pink-color);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+	font-size: 17px;
+}
+
+.modal-notify__header i {
+	cursor: pointer;
+	font-size: 18px;
+}
+
+
+.modal-notify__body	{
+	padding: 15px;
+}
+
+.modal-notify__body h2 {
+	color: var(--pink-color);
+	margin-bottom: 10px;
+}
+
+.modal-notify__footer {
+	padding: 15px;
+	text-align: right;
+}
+
+.modal-notify__footer .btn-footer-notify {
+	outline: none;
+	border: none;
+	padding: 10px 20px;
+	background-color: var(--pink-color);
+	color: white;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.modal-notify__footer a.btn-footer-notify {
+	padding: 8px 18px;
+	text-decoration: none;
+}
+
+.input-password {
+	width: 100%;
+	font-size: 20px;
+	padding: 5px 10px;
+	margin-top: 15px;
+	border-radius: 5px;
+}
